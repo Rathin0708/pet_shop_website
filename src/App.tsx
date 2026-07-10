@@ -3,6 +3,10 @@ import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Cart from './pages/Cart'
 import Favorites from './pages/Favorites'
+import Delivery from './pages/Delivery'
+import Brands from './pages/Brands'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 
 function App() {
   return (
@@ -12,6 +16,10 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/delivery" element={<Delivery />} />
+        <Route path="/brands" element={<Brands />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </div>
   )

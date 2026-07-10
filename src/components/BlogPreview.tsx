@@ -1,9 +1,11 @@
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { BLOG_POSTS } from '../data/blogPosts'
 import { useInView } from '../hooks/useInView'
 
 export default function BlogPreview() {
   const { ref, inView } = useInView<HTMLDivElement>()
+  const posts = BLOG_POSTS.slice(0, 3)
 
   return (
     <section className="bg-white/60 px-6 py-16 md:px-12 md:py-24">
@@ -17,15 +19,19 @@ export default function BlogPreview() {
               Tips and guides from our pet care team
             </p>
           </div>
-          <button className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-dark hover:text-brand-dark-hover md:mt-0">
+          <Link
+            to="/blog"
+            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-dark hover:text-brand-dark-hover md:mt-0"
+          >
             Read the Blog
             <ArrowRight size={16} />
-          </button>
+          </Link>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {BLOG_POSTS.map((post, i) => (
-            <article
+          {posts.map((post, i) => (
+            <Link
+              to={`/blog/${post.id}`}
               key={post.id}
               className={`group cursor-pointer overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-lg ${inView ? 'animate-slide-up' : 'opacity-0'}`}
               style={{ animationDelay: inView ? `${i * 120}ms` : undefined }}
@@ -46,7 +52,7 @@ export default function BlogPreview() {
                 </h3>
                 <p className="mt-2 text-sm text-gray-600 leading-relaxed">{post.excerpt}</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

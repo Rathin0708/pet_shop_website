@@ -18,16 +18,16 @@ const FOOTER_COLUMNS = [
     links: [
       { label: 'About Us', to: '#' },
       { label: 'Careers', to: '#' },
-      { label: 'Brands', to: '#' },
-      { label: 'Blog', to: '#' },
+      { label: 'Brands', to: '/brands' },
+      { label: 'Blog', to: '/blog' },
     ],
   },
   {
     heading: 'Support',
     links: [
-      { label: 'Delivery and Payment', to: '#' },
-      { label: 'Returns', to: '#' },
-      { label: 'FAQs', to: '#' },
+      { label: 'Delivery and Payment', to: '/delivery' },
+      { label: 'Returns', to: '/delivery' },
+      { label: 'FAQs', to: '/delivery' },
       { label: 'Contact Us', to: '#' },
     ],
   },

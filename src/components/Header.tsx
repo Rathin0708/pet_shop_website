@@ -7,9 +7,9 @@ import { useFavorites } from '../context/FavoritesContext'
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Shop', to: '/shop' },
-  { label: 'Delivery and payment', to: '#' },
-  { label: 'Brands', to: '#' },
-  { label: 'Blog', to: '#' },
+  { label: 'Delivery and payment', to: '/delivery' },
+  { label: 'Brands', to: '/brands' },
+  { label: 'Blog', to: '/blog' },
 ]
 
 function Badge({ children }: { children: React.ReactNode }) {
@@ -37,7 +37,8 @@ export default function Header() {
 
       <nav className="hidden md:flex items-center gap-3 lg:gap-8 min-w-0 animate-fade-in delay-200">
         {NAV_LINKS.map((link) => {
-          const active = link.to !== '#' && pathname === link.to
+          const active =
+            link.to === '/' ? pathname === '/' : pathname.startsWith(link.to)
           return (
             <Link
               key={link.label}
