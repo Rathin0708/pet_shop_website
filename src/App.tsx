@@ -7,6 +7,9 @@ import Delivery from './pages/Delivery'
 import Brands from './pages/Brands'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
+import About from './pages/About'
+import Careers from './pages/Careers'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
         <Route path="/brands" element={<Brands />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   )

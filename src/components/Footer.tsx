@@ -16,8 +16,8 @@ const FOOTER_COLUMNS = [
   {
     heading: 'Company',
     links: [
-      { label: 'About Us', to: '#' },
-      { label: 'Careers', to: '#' },
+      { label: 'About Us', to: '/about' },
+      { label: 'Careers', to: '/careers' },
       { label: 'Brands', to: '/brands' },
       { label: 'Blog', to: '/blog' },
     ],
@@ -28,7 +28,7 @@ const FOOTER_COLUMNS = [
       { label: 'Delivery and Payment', to: '/delivery' },
       { label: 'Returns', to: '/delivery' },
       { label: 'FAQs', to: '/delivery' },
-      { label: 'Contact Us', to: '#' },
+      { label: 'Contact Us', to: '/contact' },
     ],
   },
 ]
